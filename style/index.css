@@ -1,0 +1,28 @@
+.info{
+  height: 200px;
+}
+
+.red{
+  color: red;
+}
+
+.green{
+  color: green;
+}
+
+.hidden{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+
+.wel{
+  color: green;
+}
+
+.niet{
+  color: red;
+}

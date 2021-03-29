@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpaceX landing</title>
+    <link href="style/index.css" type="text/css" rel="stylesheet" />
+    <script src="scripts/main.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="SpaceX" />
+      </div>
+    </header>
+    <main class="grid-container">
+      <div class="info">
+        <article id="wolken"></article>
+        <article id="wind"></article>
+        <article id="zicht"></article>
+        <article id="weer"></article>
+        <input type="text" id="city">
+        <input type="button" id="cityButton" value="zoek">
+      </div>
+      <div id="conclusie" class="hidden">
+        <h1>In<article id="plaats"></article> kunt u <span class="wel" id="wel">wel</span><span class="niet" id="niet">niet</span> landen.</h1>
+      </div>
+    </main>
+  </body>
+</html>
