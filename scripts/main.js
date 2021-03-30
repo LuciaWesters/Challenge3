@@ -64,9 +64,39 @@ function getAPIdata() {
     };
 
   });
+}
 
+function getAPI(){
+  var city = document.getElementById('city').value;
+  var request = 'https://gnews.io/api/v4/search?&lang=nl&token=fb94d31767b1ed71f0c3717c96a794a1&q=' + city;
+
+  fetch(request)
+
+  .then(function(response){
+    return response.json();
+  })
+
+  .then(function(response){
+
+    document.getElementById('ingevuldePlaats').innerHTML = city;
+
+    var headlines = document.getElementById('headlines');
+    headlines.classList.remove('hidden');
+    headlines.classList.add('show');
+
+    console.log(response);
+
+    document.getElementById('artikel1').innerHTML = response.articles[0].title;
+    document.getElementById('artikel1URL').innerHTML = response.articles[0].url;
+    document.getElementById('artikel2').innerHTML = response.articles[1].title;
+    document.getElementById('artikel2URL').innerHTML = response.articles[1].url;
+    document.getElementById('artikel3').innerHTML = response.articles[2].title;
+    document.getElementById('artikel3URL').innerHTML = response.articles[2].url;
+
+  });
 }
 
 document.getElementById('cityButton').onclick = function(){
 	getAPIdata();
+  getAPI();
 };
