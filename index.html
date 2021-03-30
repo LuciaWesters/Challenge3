@@ -14,22 +14,25 @@
       </div>
     </header>
     <main class="grid-container">
+      <div class="zoeken">
+        <p>Vul een plaatsnaam in en ontdek of we hier kunnen landen.</p>
+        <input type="text" id="city">
+        <input type="button" id="cityButton" value="zoek">
+      </div>
+      <div id="conclusie" class="hidden conclusie">
+        <h1>In <span id="plaats"></span> kunt u <span class="wel" id="wel">wel</span><span class="niet" id="niet">niet</span> landen.</h1>
+      </div>
       <div class="info">
         <article id="wolken"></article>
         <article id="wind"></article>
         <article id="zicht"></article>
         <article id="weer"></article>
-        <input type="text" id="city">
-        <input type="button" id="cityButton" value="zoek">
-      </div>
-      <div id="conclusie" class="hidden">
-        <h1>In<span id="plaats"></span> kunt u <span class="wel" id="wel">wel</span><span class="niet" id="niet">niet</span> landen.</h1>
       </div>
       <div class="headlines hidden" id="headlines">
         <h1>Het laatste nieuws uit <span id="ingevuldePlaats"></span>:</h1>
-        <article id="artikel1"></article><article id="artikel1URL"></article>
-        <article id="artikel2"></article><article id="artikel2URL"></article>
-        <article id="artikel3"></article><article id="artikel3URL"></article>
+        <article class="artikel" id="artikel1"></article><article class="url" id="artikel1URL"></article>
+        <article class="artikel" id="artikel2"></article><article class="url" id="artikel2URL"></article>
+        <article class="artikel" id="artikel3"></article><article class="url" id="artikel3URL"></article>
       </div>
     </main>
   </body>

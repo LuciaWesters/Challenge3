@@ -1,13 +1,137 @@
-.info{
-  height: 200px;
+@import url("https://use.typekit.net/brf3zbn.css");
+
+*{
+ text-transform: uppercase;
+ color: white;
+ text-align: center;
+ font-family: "brandon-grotesque";
 }
+
+body{
+ box-sizing: border-box;
+ margin: 0px;
+ padding: 0px;
+ background-color: #00004d;
+}
+
+
+/**header**/
+
+header{
+ overflow: hidden;
+}
+
+.logo img{
+ width: 200px;
+ margin-top: 20px;
+ margin-bottom: 20px;
+ padding-left: 25px;
+}
+
+/**main**/
+
+main{
+ margin-left: 8%;
+ margin-right: 8%;
+}
+
+.grid-container{
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  row-gap: 10px;
+  justify-content: center;
+  grid-template-areas:
+    "zoeken zoeken"
+    "conclusie conclusie"
+    "info info"
+    "headlines headlines";
+}
+
+.zoeken{
+  grid-area: zoeken;
+  padding: 20px;
+  background-color: #050c40;
+  box-shadow: 3px 3px 8px #0059b3;
+}
+
+.conclusie{
+  grid-area: conclusie;
+  margin-top: 20px;
+}
+
+.info{
+  grid-area: info;
+  text-align: left;
+}
+
+.headlines{
+  grid-area: headlines;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+h1{
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/*zoeken*/
+p{
+  text-transform: none;
+  font-style: italic;
+  font-size: 18px;
+}
+
+#city{
+  background-color: #d8e0eb;
+  border: none;
+  box-shadow: 2px 2px 5px #0059b3;
+}
+
+#cityButton{
+  background-color: #80bfff;
+  box-shadow: 2px 2px 5px #0059b3;
+  color: black;
+  border: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+/*info*/
+.info > article{
+  text-align: left;
+}
+
+/*headlines*/
+.artikel{
+  text-transform: none;
+}
+
+.url{
+  text-transform: none;
+  font-style: italic;
+  font-size: 10px;
+  color: #80bfff;
+}
+
+/*plaats*/
+
+#plaats, #ingevuldePlaats{
+  color: #80bfff;
+  text-shadow: 2px 2px 3px #0059b3;
+}
+
+/*javascript functies onderdelen*/
 
 .red{
   color: red;
 }
 
 .green{
-  color: green;
+  color: white;
 }
 
 .hidden{
@@ -18,7 +142,6 @@
   display: block;
 }
 
-
 .wel{
   color: green;
 }
@@ -27,7 +150,175 @@
   color: red;
 }
 
-#map {
-  height: 90vh;
-  width: 90vw;
+
+
+/*** media query 1: tablet ***/
+
+@media only screen and (min-width: 720px) and (max-width: 1023px){
+  .grid-container{
+    font-size: 23px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 10px;
+    justify-content: center;
+    grid-template-areas:
+      "zoeken zoeken"
+      "conclusie conclusie"
+      "info info"
+      "headlines headlines";
+  }
+  .logo img{
+    width: 280px;
+    margin-top: 50px;
+    padding-left: 50px;
+    margin-bottom: 40px;
+  }
+
+  h1{
+    font-size: 30px;
+    margin-top: 40px;
+  }
+
+  .conclusie{
+    margin-top: 10px;
+  }
+
+  p{
+    font-size: 23px;
+  }
+
+  #city{
+    width: 200px;
+    height: 30px;
+  }
+
+  #cityButton{
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .url{
+    font-size: 20px;
+  }
+}
+
+
+/*** media query 2: desktop klein ***/
+
+@media only screen and (min-width: 1024px) and (max-width: 1919px){
+  .grid-container{
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 15px;
+    justify-content: center;
+    grid-template-areas:
+      "zoeken zoeken"
+      "conclusie headlines"
+      "info headlines";
+  }
+
+  .logo img{
+    width: 250px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding-left: 60px;
+  }
+
+  h1{
+    font-size: 25px;
+  }
+
+  .conclusie{
+    margin-top: 10px;
+  }
+
+  p{
+    font-size: 23px;
+  }
+
+  #city{
+    width: 200px;
+    height: 30px;
+  }
+
+  #cityButton{
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .url{
+    font-size: 20px;
+  }
+
+  .conclusie{
+    margin-top: 20px;
+  }
+
+  .headlines{
+    margin-top: 20px;
+  }
+}
+
+/*** media query 3: desktop groot ***/
+
+@media only screen and (min-width: 1920px){
+  .grid-container{
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 15px;
+    justify-content: center;
+    grid-template-areas:
+      "zoeken zoeken"
+      "conclusie headlines"
+      "info headlines";
+  }
+
+  .logo img{
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    padding-left: 80px;
+  }
+
+  h1{
+    font-size: 40px;
+  }
+
+  p{
+    font-size: 30px;
+  }
+
+  #city{
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  #cityButton{
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 30px;
+  }
+
+  .url{
+    font-size: 30px;
+  }
+
+  .conclusie{
+    margin-top: 50px;
+  }
+
+  .headlines{
+    margin-top: 50px;
+  }
 }

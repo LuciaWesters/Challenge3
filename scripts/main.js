@@ -27,10 +27,10 @@ function getAPIdata() {
     var zicht = document.getElementById('zicht');
     var weer = document.getElementById('weer');
 
-    wolken.innerHTML = 'Wolken: ' + response.clouds.all + '%';
-    wind.innerHTML = 'Wind: ' + response.wind.speed + ' m/s';
-    zicht.innerHTML = 'Zicht: ' + response.visibility + ' meter';
-    weer.innerHTML = 'Weersomstandigheden: ' + response.weather[0].description;
+    wolken.innerHTML = '~ Wolken: ' + response.clouds.all + '%';
+    wind.innerHTML = '~ Wind: ' + response.wind.speed + ' m/s';
+    zicht.innerHTML = '~ Zicht: ' + response.visibility + ' meter';
+    weer.innerHTML = '~ Weersomstandigheden: ' + response.weather[0].description;
 
     if(response.clouds.all >= 50){
       wolken.classList.add('red');
