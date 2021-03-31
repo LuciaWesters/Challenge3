@@ -88,6 +88,7 @@ p{
   background-color: #d8e0eb;
   border: none;
   box-shadow: 2px 2px 5px #0059b3;
+  color: black;
 }
 
 #cityButton{
@@ -108,6 +109,7 @@ p{
 /*headlines*/
 .artikel{
   text-transform: none;
+  margin-top: 20px;
 }
 
 .url{
@@ -213,8 +215,9 @@ p{
     font-size: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 0.5fr 2fr;
     row-gap: 15px;
+    column-gap: 10px;
     justify-content: center;
     grid-template-areas:
       "zoeken zoeken"
@@ -234,7 +237,7 @@ p{
   }
 
   .conclusie{
-    margin-top: 10px;
+    margin-top: 50px;
   }
 
   p{
@@ -254,15 +257,11 @@ p{
   }
 
   .url{
-    font-size: 20px;
-  }
-
-  .conclusie{
-    margin-top: 20px;
+    font-size: 15px;
   }
 
   .headlines{
-    margin-top: 20px;
+    margin-top: 50px;
   }
 }
 
@@ -273,7 +272,7 @@ p{
     font-size: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 0.5fr 2fr;
     row-gap: 15px;
     justify-content: center;
     grid-template-areas:
@@ -311,14 +310,14 @@ p{
   }
 
   .url{
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .conclusie{
-    margin-top: 50px;
+    margin-top: 80px;
   }
 
   .headlines{
-    margin-top: 50px;
+    margin-top: 80px;
   }
 }
